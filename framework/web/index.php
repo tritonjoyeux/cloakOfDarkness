@@ -8,7 +8,6 @@ include('../app/config/confRestart.php');
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 
 $request = Request::createFromGlobals();
 $response = new Response();
@@ -20,6 +19,7 @@ $path = $request->getPathInfo();
 if(isset($map[$path])){
     ob_start();
     include $pageDir.$map[$path];
+    $path = '/'.$path;
     $content = ob_get_clean();
     $response->setContent($content);
 }else{

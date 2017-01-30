@@ -1,9 +1,9 @@
 <?php
 $pageDir = '../app/pages/';
 $map = array(
-    "/foyer" => "foyer.php",
-    "/bar" => "bar.php",
-    "/cloak" => "cloakRoom.php",
+    "/foyer" => "all.php",
+    "/bar" => "all.php",
+    "/cloak" => "all.php",
     "/hook" => "hook.php",
     "/reset" => "../include/reset.php"
 );
