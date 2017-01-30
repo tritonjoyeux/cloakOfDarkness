@@ -11,8 +11,8 @@ printf('<div style="text-align: center">Bienvenu dans le foyer</div>');
         <?php if($_SESSION['doors']['foyer']['north'] != 'empty'){ ?>
 
             <?php if($_SESSION['doors']['foyer']['north'] == 'lock'){ ?>
-                <a href='#'>
-                    <img src="assets/endDoor.png" style="width: 50px;">
+                <a href='#' data-ajax="false">
+                    <img src="assets/endDoor.png" style="width: 50px;" >
                 </a>
             <?php }else{ ?>
                 <a href="/<?php echo $_SESSION['doors']['foyer']['north'] ?>" data-ajax="false">

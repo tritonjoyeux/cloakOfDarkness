@@ -11,11 +11,11 @@ $path = substr($path, 1);
         <?php if($_SESSION['doors'][$path]['north'] != 'empty'){ ?>
 
             <?php if($_SESSION['doors'][$path]['north'] == 'lock'){ ?>
-                <a href='#'>
+                <a href='#' data-ajax="false">
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
             <?php }else{ ?>
-                <a href="/<?php echo $_SESSION['doors'][$path]['north'] ?>">
+                <a href="/<?php echo $_SESSION['doors'][$path]['north'] ?>" data-ajax="false">
                     <img src="assets/door.png" style="width: 50px;">
                 </a>
             <?php } ?>
@@ -29,7 +29,7 @@ $path = substr($path, 1);
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
             <?php }else{ ?>
-                    <a href="/<?php echo $_SESSION['doors'][$path]['west'] ?>" data-ajax="false" style="padding-left: 1px;line-height: 355px;">
+                <a href="/<?php echo $_SESSION['doors'][$path]['west'] ?>" data-ajax="false" style="padding-left: 1px;line-height: 355px;">
                     <img src="assets/door.png" style="width: 50px;">
                 </a>
             <?php } ?>
