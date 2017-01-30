@@ -15,7 +15,7 @@ printf('<div style="text-align: center">Bienvenu dans le foyer</div>');
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
             <?php }else{ ?>
-                <a href="/<?php echo $_SESSION['doors']['foyer']['north'] ?>">
+                <a href="/<?php echo $_SESSION['doors']['foyer']['north'] ?>" data-ajax="false">
                     <img src="assets/door.png" style="width: 50px;">
                 </a>
             <?php } ?>
@@ -29,7 +29,7 @@ printf('<div style="text-align: center">Bienvenu dans le foyer</div>');
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
             <?php }else{ ?>
-                    <a href="/<?php echo $_SESSION['doors']['foyer']['west'] ?>" data-ajax="false" style="padding-left: 1px;line-height: 355px;">
+                <a href="/<?php echo $_SESSION['doors']['foyer']['west'] ?>" data-ajax="false" style="padding-left: 1px;line-height: 355px;">
                     <img src="assets/door.png" style="width: 50px;">
                 </a>
             <?php } ?>
@@ -54,7 +54,7 @@ printf('<div style="text-align: center">Bienvenu dans le foyer</div>');
         <?php if($_SESSION['doors']['foyer']['south'] != 'empty'){ ?>
 
             <?php if($_SESSION['doors']['foyer']['south'] == 'lock'){ ?>
-                <a href='#' data-ajax="false" style="padding-right: 10px;">
+                <a href='#' data-ajax="false" style="padding-right: 10px;" data-ajax="false">
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
             <?php }else{ ?>
