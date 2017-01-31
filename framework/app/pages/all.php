@@ -2,9 +2,7 @@
 include("../app/include/layout.html");
 $path = substr($path, 1);
 ?>
-<div style="text-align: center">Bienvenu dans le <?php echo $path ?>
-
-
+<div style="text-align: center"><h1><?php echo $path ?></h1>+
 <br>
 <div style="width: 500px; height: auto; background-image:  url('assets/<?php echo $_SESSION['doors']['background'] ?>'); display: inline-block; text-align: left;">
 	<div style="text-align:center; background-color: transparent; padding-top: 10px; height: 60px">
