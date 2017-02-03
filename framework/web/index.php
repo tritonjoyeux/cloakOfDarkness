@@ -4,7 +4,6 @@ session_start();
 
 require_once ("../vendor/autoload.php");
 
-include('../app/config/confRestart.php');
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,6 +15,9 @@ include('../app/config/routing.php');
 
 $path = $request->getPathInfo();
 
+if(isset($map[$path]) && $map[$path] == '../include/reset.php'){
+    include('../app/config/confRestart.php');
+}
 if(isset($map[$path])){
     ob_start();
     include $pageDir.$map[$path];
