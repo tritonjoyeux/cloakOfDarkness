@@ -1,3 +1,2 @@
 jacket : { pic: jacket.png, desc: A light absorbing jacket. }
-
 door : { pic: door.png, desc: A useless piece of a door }
