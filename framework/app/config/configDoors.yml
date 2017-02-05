@@ -1,0 +1,4 @@
+foyer: { north: lock, south: bar, est: empty, west: cloak }
+bar: { north: foyer, south: empty, est: empty, west: empty }
+cloak: { north: empty, south: empty, est: foyer, west: empty }
+background: background.png
