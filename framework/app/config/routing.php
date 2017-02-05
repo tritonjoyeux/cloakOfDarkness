@@ -4,6 +4,6 @@ $map = array(
     "/foyer" => "all.php",
     "/bar" => "all.php",
     "/cloak" => "all.php",
-    "/hook" => "hook.php",
-    "/reset" => "../include/reset.php"
+    "/action" => "action.php", //DO NOT DELETE THIS LINE
+    "/reset" => "../include/reset.php" //THIS LINE TOO
 );

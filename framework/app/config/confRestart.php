@@ -8,4 +8,5 @@ include("parseymlDoors.php");
 include("parseymlInventory.php");
 include("parseymlStart.php");
 include("parseymlLight.php");
+include("parseymlWin.php");
 

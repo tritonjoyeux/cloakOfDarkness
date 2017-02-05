@@ -1,6 +1,5 @@
 <?php
-include("../app/include/layout.html");
-
+include("../app/include/layout.php");
 
 $path = substr($path, 1);
 
@@ -15,14 +14,17 @@ function lightDoor($path){
 function isObject($path, $direction){
     $val = explode('-', $_SESSION['doors'][$path][$direction]);
     if($val[0] == 'action'){
-        ?>
-        <a href='<?php echo $val[1]; ?>' data-ajax="false">
-            <img src="assets/<?php echo $val[1]; ?>.png" style="width: 30px;">
+        if($direction == "west" || $direction == "est"){ ?>
+            <a href='/action' data-ajax="false" style="display: inline-block; margin-top: 164px;" class="action" id="<?php echo $val[1]; ?>">
+        <?php }else { ?>
+            <a href='/action' data-ajax="false" class="action" id="<?php echo $val[1]; ?>">
+        <?php } ?>
+            <img src="assets/<?php echo $val[1]; ?>.png" style="width: 30px; margin: 10px;">
         </a>
         <?php
     }else {
         if($direction == "west" || $direction == "est"){?>
-            <a href="/<?php echo $_SESSION['doors'][$path][$direction] ?>" data-ajax="false" style="line-height: 355px;">
+            <a href="/<?php echo $_SESSION['doors'][$path][$direction] ?>" data-ajax="false" style="display: inline-block; margin-top: 164px;">
         <?php }else {?>
             <a href="/<?php echo $_SESSION['doors'][$path][$direction] ?>" data-ajax="false">
         <?php } ?>
