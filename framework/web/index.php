@@ -4,6 +4,10 @@ session_start();
 
 require_once ("../vendor/autoload.php");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b69fec962140274afc8c1ef9e898023e968fdfda
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
