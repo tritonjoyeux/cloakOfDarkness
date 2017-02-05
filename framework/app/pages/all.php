@@ -12,6 +12,25 @@ function lightDoor($path){
     }
 }
 
+function isObject($path, $direction){
+    $val = explode('-', $_SESSION['doors'][$path][$direction]);
+    if($val[0] == 'action'){
+        ?>
+        <a href='<?php echo $val[1]; ?>' data-ajax="false">
+            <img src="assets/<?php echo $val[1]; ?>.png" style="width: 30px;">
+        </a>
+        <?php
+    }else {
+        if($direction == "west" || $direction == "est"){?>
+            <a href="/<?php echo $_SESSION['doors'][$path][$direction] ?>" data-ajax="false" style="line-height: 355px;">
+        <?php }else {?>
+            <a href="/<?php echo $_SESSION['doors'][$path][$direction] ?>" data-ajax="false">
+        <?php } ?>
+            <?php lightDoor($path); ?>
+        </a>
+        <?php
+    }
+}
 ?>
 <div style="text-align: center"><h1><?php echo $path ?></h1>
 <br>
@@ -22,20 +41,16 @@ if($_SESSION['light'][$path] == 'light'){
     echo 'unlight.png';
 }
 ?>'); display: inline-block; text-align: left;">
-	<div style="text-align:center; background-color: transparent; padding-top: 10px; height: 60px">
+    <div style="text-align:center; background-color: transparent; padding-top: 10px; height: 60px">
         <?php if($_SESSION['doors'][$path]['north'] != 'empty'){ ?>
 
             <?php if($_SESSION['doors'][$path]['north'] == 'lock'){ ?>
                 <a href='#' data-ajax="false">
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
-            <?php }else{ ?>
-                <a href="/<?php echo $_SESSION['doors'][$path]['north'] ?>" data-ajax="false">
-                    <?php lightDoor($path); ?>
-                </a>
-            <?php } ?>
+            <?php }else{ isObject($path, "north"); } ?>
         <?php } ?>
-	</div>
+    </div>
     <div style="display: inline-block; width: 245px; height: 355px; text-align: left; vertical-align: top">
         <?php if($_SESSION['doors'][$path]['west'] != 'empty'){ ?>
 
@@ -43,11 +58,7 @@ if($_SESSION['light'][$path] == 'light'){
                 <a href='#' data-ajax="false" style="padding-left: 1px;line-height: 355px;">
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
-            <?php }else{ ?>
-                <a href="/<?php echo $_SESSION['doors'][$path]['west'] ?>" data-ajax="false" style="padding-left: 1px;line-height: 355px;">
-                    <?php lightDoor($path); ?>
-                </a>
-            <?php } ?>
+            <?php }else{ isObject($path, "west"); } ?>
         <?php } ?>
     </div>
     <div style="display: inline-block; width: 245px; text-align: right; height: 355px; vertical-align: top">
@@ -57,11 +68,7 @@ if($_SESSION['light'][$path] == 'light'){
                 <a href='#' data-ajax="false" style="padding-right: 10px; line-height: 355px">
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
-            <?php }else{ ?>
-                <a href="/<?php echo $_SESSION['doors'][$path]['est'] ?>" data-ajax="false" style="padding-right: 10px; line-height: 355px">
-                    <?php lightDoor($path); ?>
-                </a>
-            <?php } ?>
+            <?php }else{ isObject($path, "est"); } ?>
         <?php } ?>
     </div>
 
@@ -72,11 +79,7 @@ if($_SESSION['light'][$path] == 'light'){
                 <a href='#' data-ajax="false" style="padding-right: 10px;">
                     <img src="assets/endDoor.png" style="width: 50px;">
                 </a>
-            <?php }else{ ?>
-                <a href='/<?php echo $_SESSION['doors'][$path]['south'] ?>' data-ajax="false" style="padding-right: 10px;">
-                    <?php lightDoor($path); ?>
-                </a>
-            <?php } ?>
+            <?php }else{ isObject($path, "south"); } ?>
         <?php } ?>
     </div>
 </div>

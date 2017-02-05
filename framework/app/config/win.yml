@@ -1,3 +1,2 @@
-first: { jacket: cloak }
-
-jacket: { light: bar }
+first: { jacket: cloak-hook }
+    jacket: { light: bar }
