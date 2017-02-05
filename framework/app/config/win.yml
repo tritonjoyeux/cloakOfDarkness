@@ -1,1 +1,2 @@
 first: { where: hook, object: jacket, light: bar, done: false }
+last : { where: bar }

@@ -1,4 +1,4 @@
-foyer: { north: lock, south: bar, est: empty, west: cloak }
-bar: { north: foyer, south: empty, est: empty, west: empty }
-cloak: { north: empty, south: empty, est: foyer, west: action-hook }
+foyer: { north: lock, south: bar, est: empty, west: cloak, desc: On est dans le foyer.. Une piece vide et froide a l'allure terrifiante: Regarde ! Il y a 2 portes au sud et a l'ouest. Ou menent elles ? }
+bar: { north: foyer, south: empty, est: empty, west: empty, desc: C'est surrement le bar.. Il fait nettement plus chaud ici ! Ca sent la biere.. Ahhh j'en ai partout sur mes chaussures }
+cloak: { north: empty, south: empty, est: foyer, west: action-hook, desc: Ca doit etre la salle du temps.. Depeche toi je n'ai pas trop envi de m'attarder ici ! }
 background: background.png

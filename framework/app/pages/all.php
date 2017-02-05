@@ -2,6 +2,17 @@
 include("../app/include/layout.php");
 
 $path = substr($path, 1);
+$check = false;
+
+foreach ($_SESSION['actions'] as $action) {
+    if(isset($action['done']) && $action['done'] == false){
+        $check = true;
+    }
+}
+
+if($check == false && $path == $_SESSION['actions']['last']['where']){
+    ?><script>alert('Bien joue morray');</script><?php
+}
 
 function lightDoor($path){
     if($_SESSION['light'][$path] == 'light'){
@@ -35,6 +46,7 @@ function isObject($path, $direction){
 }
 ?>
 <div style="text-align: center"><h1><?php echo $path ?></h1>
+    <h5><?php echo $_SESSION['doors'][$path]['desc']; ?> <img src="assets/friend.gif"></h5>
 <br>
 <div style="width: 500px; height: auto; background-image:  url('assets/<?php
 if($_SESSION['light'][$path] == 'light'){

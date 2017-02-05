@@ -1,3 +1,3 @@
 jacket : { pic: jacket.png, desc: A light absorbing jacket. }
 
-alexandre : { pic: door.png, desc: Une grosse teub !!! }
+door : { pic: door.png, desc: A useless piece of a door }
