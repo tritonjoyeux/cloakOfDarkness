@@ -23,7 +23,7 @@ Modification de la lumière dans les salles : <u>app/config/configLight.yml
 
 <i>light / unlight</i> pour allumer ou eteindre la lumiere
 
-Modification de l'inventaire : <u>app/config/inventory.yml 
+Modification de l'inventaire : <u>app/config/inventory.yml  
 
 <i>pic</i> represente la photo à utiliser
 
