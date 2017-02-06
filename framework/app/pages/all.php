@@ -11,7 +11,16 @@ foreach ($_SESSION['actions'] as $action) {
 }
 
 if($check == false && $path == $_SESSION['actions']['last']['where']){
-    ?><script>alert('Bien joue morray');</script><?php
+    if($_SESSION['loose']['checkRoom']['current'] >= $_SESSION['loose']['checkRoom']['times']){
+        ?><script>alert('T\'as perdu morray');</script><?php
+    }else{
+        ?><script>alert('Bien joue morray');</script><?php
+    }
+}else if($check == true && $path == $_SESSION['loose']['checkRoom']['room']) {
+    $_SESSION['loose']['checkRoom']['current']++;
+    if($_SESSION['loose']['checkRoom']['current'] >= $_SESSION['loose']['checkRoom']['times']){
+        ?><script>alert('T\'as perdu morray');</script><?php
+    }
 }
 
 function lightDoor($path){

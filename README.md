@@ -32,6 +32,18 @@ Modification des condition de win : <u>app/config/win.yml
 <i>done</i> sert a check l'action<br>
 <i>last</i> signifie la salle de fin !
 
+Modification des salles : <u>app/config/routing.php</u>
+
+<i>/room</i> ou room signifie l'url a utiliser<br>
+<i>all.php</i> fichier générique des rooms 
+
+Modification de la condition de loose : <u>app/config/loose.yml</u> 
+
+<i>checkRoom</i> signifie le nombre de fois entré dans une salle tant que la partie n'est pas finit<br>
+<i>room</i> signifie la salle<br>
+<i>times</i> signifie le nombre<br>
+<i>current</i> NE PAS ENLEVER ! signifie le nombre actuel d'entrées<br>
+
 <h2>IMPORTANT !</h2>
 
 NE PAS MODIFIER LES FICHIER LES FICHIERS NON LISTE CI DESSUS !
