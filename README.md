@@ -6,10 +6,10 @@ Installer le dossier vendor via composer
 
 <h2>How to run</h2>
 
-Placez vous dans le dossier framework du projet.
-Entrez la commande "composer install"
-Lancez la commande : php -S 127.0.0.1:8080 -t web/
-Appuyes sur le bouton "recommencer"
+Placez vous dans le dossier framework du projet.<br>
+Entrez la commande "composer install"<br>
+Lancez la commande : php -S 127.0.0.1:8080 -t web/<br>
+Appuyes sur le bouton "recommencer"<br>
 
 <h2>Update the game</h2>
 
