@@ -10,4 +10,3 @@ include("parseymlStart.php");
 include("parseymlLight.php");
 include("parseymlWin.php");
 include("parseymlLoose.php");
-
